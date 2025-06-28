@@ -1,0 +1,87 @@
+.testInvitation{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.testInvitation__main-container{
+    padding: 64px 80px 5px 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testInvitation__left-part{
+    display: flex;
+    flex-direction: column;
+}
+
+.testInvitation__title{
+    margin: 0;
+    padding: 0;
+    max-width: 497px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 150%;
+    padding-bottom: 12px;
+    padding-top: 130px;
+}
+
+.testInvitation__description{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: rgba(103, 103, 103, 1);
+    max-width: 675px;
+    z-index: 2;
+    padding-bottom: 32px;
+}
+
+.testInvitation__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 275px;
+    height: 56px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 150%;
+    color: white;
+    z-index: 1;
+    background: linear-gradient(207.48deg, #2F9EA5 17.11%, #11B7CE 117.3%);
+  }
+  
+  .testInvitation__button::before {
+    content: '';
+    position: absolute;
+    top: 2px; /* толщина рамки */
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 48px; /* чуть меньше, чтобы не вылезал */
+    background: radial-gradient(
+      74.03% 95.19% at 48.09% 47.12%,
+      #028DA0 0%,
+      #14D8E4 100%
+    );
+    z-index: -1;
+    box-shadow: 0px 4px 2px 0px rgba(255, 255, 255, 0.8) inset;
+  }
+
+  .testInvitation__button:hover::before{
+    background: radial-gradient(74.03% 95.19% at 48.09% 47.12%, #028DA0 0%, #0AD1DE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45) inset;
+  }
+  
+  .testInvitation__button:active::before{
+    background: radial-gradient(74.03% 95.19% at 48.09% 47.12%, #028DA0 0%, #0AC3CF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.75) inset;
+  }

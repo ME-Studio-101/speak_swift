@@ -1,0 +1,59 @@
+.teachers{
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: rgba(249, 249, 249, 1);
+}
+
+.teachers__main-header{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 64px 80px 44px;
+}
+
+.teachers__title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+}
+
+.teachers__title-span{
+    background: linear-gradient(90deg, #5AD5B7 60.2%, #3EC3E3 80.7%, #36D9CF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.teachers__description{
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(103, 103, 103, 1);
+}
+
+.teachers__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 80px 64px;
+}
+
+.teachers__list::-webkit-scrollbar {
+    display: none;
+}

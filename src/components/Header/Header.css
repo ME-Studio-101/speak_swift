@@ -1,0 +1,255 @@
+/* Родительский блок шапки */
+.header{
+    display: flex;
+    padding: 24px 80px;
+    justify-content: space-between;
+    align-items:center;
+}
+
+/*Блок с логотипом и контейнером навигационного меню */
+.header__nav-container{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 45px;
+}
+
+/* Логотип */
+.header__logo{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Futura';
+    font-size: 20.92px;
+    font-weight: 700;
+    line-height: 29.88px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.header__logo:hover{
+    cursor: pointer;
+}
+
+/* блок навигационного меню */
+.header__nav-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+ /* Ссылки навигационного меню */
+.header__link{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    position: relative;
+}
+
+/* Создаем подчеркивание через псевдоэлемент */
+.header__link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    width: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 1);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+/* Анимация при наведении */
+.header__link:hover::after {
+    width: 100%;
+}
+
+/* Раздел навигационной панели выпадающего меню */
+.header__link-drop{
+    position: relative;
+    display: inline-block;
+}
+
+.header__link-drop:hover{
+    color: rgba(48, 48, 48, 1);
+    z-index: 1;
+}
+
+/* Добавляем псевдоэлемент для заливки */
+.header__link-drop::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -24px;
+    width: 113px;
+    height: 54px;
+    z-index: -1;
+    border-radius: 24px 24px 0 0;
+}
+
+.header__link-drop:hover::before {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.header__link-drop:hover::after {
+    height: 60%;
+    width: 100%;
+}
+
+.dropdown{
+    margin: 0;
+    padding: 0;
+    width: 260px;
+    height: 212px;
+    background-color: rgba(255, 255, 255, 1);
+    list-style: none;
+    position: absolute;
+    top: 38px;
+    left: -24px;
+    border-radius: 0 24px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.dropdown-item{
+    margin: 0;
+    padding: 0;
+    min-width: calc(260px - 48px);
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.dropdown-link{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: rgba(48, 48, 48, 1);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.dropdown-span{
+    visibility: hidden;
+}
+
+.dropdown-item:hover{
+    background-color: rgba(62, 197, 225, 0.05);
+}
+
+.dropdown-item:hover .dropdown-span{
+    visibility: visible;
+}
+
+.dropdown-item:hover .dropdown-link{
+    color: rgba(62, 197, 225, 1);
+}
+
+/* Стрелка раскрывающегося списка */
+.arrow{
+    width: 8px;
+    height: 4px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+/*блок с контактной информацией*/
+.header__contact-container{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+/* элемент с номером телефона */
+.header__phone{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif; 
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* кнопка обратной связи */
+.header__bottom{
+    width: 200px;
+    height: 56px;
+    color: rgba(255, 255, 255, 1);
+    border: rgba(255, 255, 255, 1) solid 1.5px;
+    background: transparent;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif; 
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.header__bottom:hover{
+    color: rgba(48, 48, 48, 1);
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    border: solid 5px transparent;
+    border-image: url(../../Image/flaf-round-corners.png) 2 round;
+}
+
+/* Стили для гамбургер-меню (скрыт по умолчанию) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 3px;
+    transition: 0.3s;
+    border-radius: 25%;
+}
+
+/* Медиа-запрос для экранов меньше 1150px */
+@media screen and (max-width: 1100px) {
+    /* Показываем гамбургер */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Скрываем навигационное меню */
+    .header__nav-list {
+        display: none;
+    }
+
+    /* Скрываем телефон */
+    .header__phone {
+        display: none;
+    }
+
+    /* Перестраиваем контейнер шапки */
+    .header {
+        padding: 24px;
+    }
+
+    .header__contact-container{
+        gap: 28px;
+    }
+}
+
+/* Медиа-запрос для экранов меньше 450px */
+@media screen and (max-width: 450px){
+    .header__bottom{
+        display: none;
+    }
+}

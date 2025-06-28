@@ -1,0 +1,81 @@
+.invitation{
+    max-width: 1440px;
+    height: 452px;
+    margin: 0 auto;
+    background-image: url(../../Image/Invitation/background.svg);
+    background-size: cover;
+    background-color: rgb(36,174,203);
+    border-radius:20px 20px 0 0;
+    color: rgba(255, 255, 255, 1);
+}
+
+.invitattion__main-box{
+    padding: 64px 112px 56px;
+    position: relative;
+    background-image: url(../../Image/Invitation/w-vector.svg);
+    background-repeat: no-repeat;
+    background-position: 605px;
+}
+
+.invitation__title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 150%;
+    max-width: 700px;
+    margin-bottom: 24px;
+}
+
+.invitation__list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+    list-style-type:  content "\2022";
+    font-size: 25px;
+    padding-left: 35px;
+}
+
+
+.invitation__text{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.invitation__image{
+    width: 600px;
+    height: 480px;
+    position: absolute;
+    top: -30px;
+    left: 839px;
+}
+
+.invitation__button{
+    width: 275px;
+    height: 66px;
+    background-color: rgba(255, 255, 255, 1);
+    border-style: none;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 150%;
+    cursor: pointer;
+    box-shadow: 0px 20px 25px 0px rgba(7, 145, 174, 1);
+}
+
+.invitation__button:hover{
+    box-shadow: 0px 30px 35px 0px rgba(0, 121, 150, 1);
+}
+
+.invitation__button:active{
+    box-shadow: 0px 4px 11px 0px rgba(0, 121, 150, 1) inset;
+}

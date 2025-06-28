@@ -1,0 +1,113 @@
+.lessoncard{
+    width: 345px;
+    height: 610px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(240, 240, 240, 1);
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    position: relative;
+}
+
+.lessoncard__image{
+    width: 240px;
+    height: 240px;
+}
+
+.lessoncard__textbox{
+    width: 346px;
+    height: 264px;
+    color: rgba(103, 103, 103, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lessoncard__header{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: rgba(48, 48, 48, 1);
+}
+
+.lessoncard__description{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(103, 103, 103, 1);
+}
+
+.lessoncard__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 346px;
+    height: 56px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 150%;
+    color: white;
+    z-index: 1;
+    background: linear-gradient(207.48deg, #2F9EA5 17.11%, #11B7CE 117.3%);
+
+  }
+  
+  .lessoncard__link::before {
+    content: '';
+    position: absolute;
+    top: 2px; /* толщина рамки */
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 48px; /* чуть меньше, чтобы не вылезал */
+    background: radial-gradient(
+      74.03% 95.19% at 48.09% 47.12%,
+      #028DA0 0%,
+      #14D8E4 100%
+    );
+    z-index: -1;
+    box-shadow: 0px 4px 2px 0px rgba(255, 255, 255, 0.8) inset;
+  }
+
+  .lessoncard__link:hover::before{
+    background: radial-gradient(74.03% 95.19% at 48.09% 47.12%, #028DA0 0%, #0AD1DE 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.45) inset;
+  }
+  
+  .lessoncard__link:active::before{
+    background: radial-gradient(74.03% 95.19% at 48.09% 47.12%, #028DA0 0%, #0AC3CF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.75) inset;
+  }
+
+.lessoncard__label{
+    margin: 0;
+    padding: 0;
+    min-width: 44px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 10px 16px;
+    text-align: center;
+    border-radius: 24px;
+    color: rgba(62, 197, 225, 1);
+    background-color: rgba(62, 197, 225, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

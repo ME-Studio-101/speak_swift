@@ -1,0 +1,124 @@
+.universal{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.universal__main-container{
+    padding: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.universal__text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 1200px;
+}
+
+.universal__title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+}
+
+.universal__title-span{
+    background: linear-gradient(90deg, #5AD5B7 60.2%, #3EC3E3 80.7%, #36D9CF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.universal__paragraf{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color:rgba(103, 103, 103, 1);
+}
+
+.universal__list-container{
+    display: flex;
+    gap: 44px;
+}
+
+.universal__image{
+    width: 600px;
+    height: 750px;
+    border-radius: 140px;
+}
+
+.universal__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 24px;
+}
+
+.universal__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: start;
+}
+
+.universal__item-image{
+    padding: 21px;
+    border-radius: 24px;
+}
+
+.universal__item-image1{
+    background-color: rgba(81, 150, 255, 0.1);
+}
+
+.universal__item-image2{
+    background-color: rgba(20, 198, 102, 0.1);
+}
+
+.universal__item-image3{
+    background-color: rgba(0, 163, 198, 0.1);
+}
+
+.universal__item-image4{
+    background-color: rgba(255, 112, 81, 0.1);
+}
+
+.universal__item-image5{
+    background-color: rgba(157, 81, 255, 0.1);
+}
+
+.universal__item-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.universal__item-title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.universal__item-text{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(103, 103, 103, 1);
+}
