@@ -2,9 +2,9 @@ name: Deploy to Server
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ v1, cicd ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ v1, cicd ]
 
 jobs:
   build-and-deploy:
