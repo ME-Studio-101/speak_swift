@@ -8,6 +8,7 @@
 
 - **Node.js** (версия 14.0.0 или выше)
 - **npm** (обычно устанавливается вместе с Node.js)
+- **Docker** (для контейнеризации)
 
 ## Инструкция по запуску
 
@@ -33,6 +34,32 @@ npm start
 
 Для остановки сервера разработки нажмите `Ctrl + C` в терминале.
 
+## Запуск с Docker
+
+### Локальное тестирование:
+```bash
+# Запуск с Docker Compose
+docker-compose -f ci_cd/docker-compose.yml up -d
+
+# Ручной запуск
+docker build -t speak-swift -f ci_cd/Dockerfile .
+docker run -d --name speak-swift-app -p 3000:80 speak-swift
+```
+
+## Деплой на сервер
+
+### Автоматический деплой:
+1. Настройте GitHub Secrets (см. `ci_cd/SERVER_SETUP.md`)
+2. Сделайте push в ветку `main`
+3. GitHub Actions автоматически развернет приложение
+
+### Ручной деплой:
+```bash
+./ci_cd/deploy.sh your-server-ip your-username
+```
+
+Подробная инструкция по настройке сервера находится в файле `ci_cd/SERVER_SETUP.md`.
+
 ## Структура проекта
 
 ```
@@ -49,6 +76,13 @@ speak_swift/
 │   ├── Image/             # Изображения
 │   ├── vendor/            # Внешние ресурсы (шрифты, стили)
 │   └── index.js           # Точка входа приложения
+├── ci_cd/                 # CI/CD настройки
+│   ├── Dockerfile         # Конфигурация Docker
+│   ├── nginx.conf         # Конфигурация Nginx
+│   ├── docker-compose.yml # Docker Compose
+│   ├── deploy.sh          # Скрипт деплоя
+│   └── SERVER_SETUP.md    # Инструкция по настройке сервера
+├── .github/workflows/     # GitHub Actions
 ├── package.json           # Зависимости и скрипты
 └── README.md              # Этот файл
 ```
